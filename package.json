@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "sequelize": "^6.33.0",
+    "sqlite3": "^5.0.0"
+  },
+  "name": "job_finder",
+  "version": "1.0.0",
+  "description": "Portal de vagas para desenvolvedores de software, desenvolvido com node, express e bootstrap",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianogomesz/job_finder.git"
+  },
+  "keywords": [
+    "vagas",
+    "dev",
+    "trabalho",
+    "remoto",
+    "desenvolvimento",
+    "de",
+    "software"
+  ],
+  "author": "Adriano Gomes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianogomesz/job_finder/issues"
+  },
+  "homepage": "https://github.com/adrianogomesz/job_finder#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
