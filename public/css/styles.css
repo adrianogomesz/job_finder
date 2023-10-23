@@ -32,19 +32,32 @@
 
 .navbar .nav-item .btn {
     color: #FFF;
+    background-color: #FFD500;
+    border: 1px solid rgba(0, 0, 0,.15);
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+
+
+.navbar .nav-item #vagas-btn:hover {
+    color: #F03E3E;
+    background-color: #FFF;
+    border-color: #F03E3E;
+}
+
+
+.navbar .nav-item #vagas-btn {
+    color: #FFF;
     background-color: #F03E3E;
     border: 1px solid transparent;
     border-radius: 0;
-
-}
-
-
-.nav-link.btn.btn-primary:hover {
+  }
+  
+  .nav-link.btn.btn-primary:hover {
     background-color: #FFF;
     color: #F03E3E;
     border-color: #F03E3E;
-
-}
+  }
 
 
 /* banner */
@@ -165,6 +178,7 @@
     top: 35px;
     height: 50px;
     line-height: 35px;
+    color: #FFF;
     background-color: #F03E3E;
     border: 1px solid transparent;
     border-radius: 0;
