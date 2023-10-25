@@ -14,7 +14,7 @@
 
          
 
-        <form id="search-form" class="form-inline" action="">
+        <form id="search-form" class="form-inline" action="/" method="GET">
 
             <div class="form-group col-md-10">
 
@@ -40,73 +40,38 @@
 
                 <div class="col-md-12">
 
+                    {{#if search}}
+                    <h2 id="job-list-title">
+
+                        Esses foram os resultados da sua busca:
+
+                    </h2>
+                    {{else}}
                     <h2 id="job-list-title">
 
                         Veja nossas vagas em destaque!
 
                     </h2>
-
+                    {{/if}}
                     <ul id="job-list" class="list-group">
 
-                        <li class="list-group-item new-job">
-
+                        {{#each jobs}}
+                        <li class="list-group-item {{#if dataValues.new_job}} new-job {{/if}}">
+                    
                             <img src="img/company.png" alt="Company">
-
-                            <p> Empresa </p>
-
-                            <h2> Titulo da Vaga </h2>
-
-                            <p> R$2000,00 </p>
-
+                    
+                            <p> {{dataValues.company}} </p>
+                    
+                            <h2> {{dataValues.title}} </h2>
+                    
+                            <p> R${{dataValues.salary}},00 </p>
+                    
                             <span class="new-job-label"> Nova </span>
-
-                            <a class="btn btn-primary"> Ver Vaga </a>
-                            
+                    
+                            <a class="btn btn-primary" href="jobs/view/{{dataValues.id}}"> Ver Vaga </a>
+                    
                         </li>
-
-                        <li class="list-group-item new-job">
-
-                            <img src="img/company.png" alt="Company">
-
-                            <p> Empresa </p>
-
-                            <h2> Titulo da Vaga </h2>
-
-                            <p> R$2000,00 </p>
-
-                            <span class="new-job-label"> Nova </span>
-
-                            <a class="btn btn-primary"> Ver Vaga </a>
-                            
-                        </li>
-
-                        <li class="list-group-item">
-
-                            <img src="img/company.png" alt="Company">
-
-                            <p> Empresa </p>
-
-                            <h2> Titulo da Vaga </h2>
-
-                            <p> R$2000,00 </p>
-
-                            <a class="btn btn-primary"> Ver Vaga </a>
-                            
-                        </li>
-
-                        <li class="list-group-item">
-
-                            <img src="img/company.png" alt="Company">
-
-                            <p> Empresa </p>
-
-                            <h2> Titulo da Vaga </h2>
-
-                            <p> R$2000,00 </p>
-
-                            <a class="btn btn-primary"> Ver Vaga </a>
-                            
-                        </li>
+                        {{/each}}
 
                     </ul>
 

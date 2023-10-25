@@ -4,13 +4,6 @@ const Job     = require('../models/Job');
 
 
 // add job via post
-
-router.get('/test', (req, res) => {
-
-    res.send("Deu Certo!");
-
-});
-
 router.post('/add', (req, res) => {
     
     let {id, title, description, salary, company, email, new_job} = req.body;
@@ -32,4 +25,4 @@ router.post('/add', (req, res) => {
 
 });
 
-module.exports = router;
+module.exports = router
